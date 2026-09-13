@@ -51,7 +51,7 @@ python Miniprojeto_Daniele_de_Souza_Analise_de_Dados_T6.py
 
 ### Google Colab
 
-Envie `Base Varejo.csv` e o arquivo `.py` para o ambiente do Colab ou copie o conteúdo do script para uma célula. Execute todas as etapas em sequência.
+Envie `Base Varejo.csv` e o arquivo `Miniprojeto_Daniele_de_Souza_Analise_de_Dados_T6.py` para o ambiente do Colab ou copie o conteúdo do script para uma célula. Execute todas as etapas em sequência.
 
 ## 4. ETL e qualidade dos dados
 

@@ -6,11 +6,14 @@ Análise Exploratória da base Varejo.csv utilizando pandas.
 """
 
 from pathlib import Path
+from contextlib import redirect_stdout
+from io import StringIO
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent
 ARQUIVO_BASE = BASE_DIR / "Base Varejo.csv"
 ARQUIVO_LIMPO = BASE_DIR / "df_limpo.csv"
+ARQUIVO_RESULTADO = BASE_DIR / "resultado_execucao.txt"
 
 COLUNAS = [
     "DATA", "CO_ID", "CL_ID", "CL_GENERO", "CL_EC", "CL_FHL",
@@ -232,4 +235,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    saida = StringIO()
+    with redirect_stdout(saida):
+        main()
+
+    resultado = saida.getvalue()
+    print(resultado, end="")
+    ARQUIVO_RESULTADO.write_text(resultado, encoding="utf-8-sig")
